@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CevikTeknikChat.View.AddRoomPage">
+    <ContentPage.Content>
+
+        <TableView Intent="Form">
+            <TableView.Root>
+                <TableSection>
+                    <EntryCell x:Name="_rootname" Placeholder="Oda Adını Giriniz"></EntryCell>
+                    <ViewCell>
+                        <Button Text="Oluştur" Clicked="dd">
+                            
+                        </Button>
+                    </ViewCell>
+                </TableSection>
+            </TableView.Root>
+        </TableView>
+        
+    </ContentPage.Content>
+</ContentPage>

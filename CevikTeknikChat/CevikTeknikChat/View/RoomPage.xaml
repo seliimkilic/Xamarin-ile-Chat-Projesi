@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CevikTeknikChat.View.RoomPage">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="ekle"></ToolbarItem>
+        <ToolbarItem Text="?" Clicked="ekleme" ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding .}" SeparatorVisibility="None" x:Name="_lstx" RowHeight="120"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="deneme"
+                  ItemSelected="secme">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="Blue" Margin="10">
+                            <Label Text="{Binding Name}" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="20"></Label>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
